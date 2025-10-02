@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resume Services - Your Resume Deserves A Yes</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="assets/Group.png" alt="Company Logo" class="logo-image">
+                </div>
+                <nav class="navigation">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">About Us</a>
+                    <a href="#" class="nav-link">Our Services</a>
+                    <a href="#" class="nav-link">Pricing</a>
+                    <a href="#" class="nav-link">FAQ</a>
+                </nav>
+                <button class="cta-button">Get A Quote</button>
+                <button class="hamburger-menu" id="hamburger-menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2 class="hero-title">
+                            <span class="title-line">Your Resume</span>
+                            <span class="title-line">
+                                <span class="red-underline">Deserves A Yes</span> Let's
+                            </span>
+                            <span class="title-line">Make It Happen</span>
+                        </h2>
+                        <p class="hero-description">
+                            If Your Resume Isn't Getting Responses, It's Time For An Upgrade. Get An ATS-Optimized
+                            Resume Crafted By HR Experts To Help You Land More Interviews. Our Resumes Are Designed To
+                            Get Your Foot In The Door And Place Your Name At The Top Of The Shortlist.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn-outline">RESUME PACKAGES</button>
+                            <button class="btn-primary">CONTACT US</button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="main-image">
+                            <img src="assets/Group 12.png" alt="Professional woman with resume materials"
+                                class="hero-img">
+                        </div>
+                        <div class="overlay-card rating-card">
+                            <div class="rating-content">
+                                <div class="rating-number">4.9</div>
+                                <div class="rating-details">
+                                    <div class="stars">★★★★☆</div>
+                                    <div class="rating-text">Instructor Rating</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="features-label">What You Get</div>
+                <h3 class="features-title">You're Not Just Another Applicant And Your Resume Shouldn't Look Like One
+                </h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-illustration">
+                            <img src="assets/g1.png" alt="Resume passing ATS filters" class="feature-img">
+                        </div>
+                        <h4 class="feature-title">A Resume That Passes ATS Filters</h4>
+                        <p class="feature-description">Get a professionally written, keyword-optimized resume that lands
+                            in recruiter inboxes —not rejection piles.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-illustration">
+                            <img src="assets/g2.png" alt="Cover letter getting read" class="feature-img">
+                        </div>
+                        <h4 class="feature-title">A Cover Letter That Gets Read</h4>
+                        <p class="feature-description">Stand out with a cover letter that speaks directly to the role
+                            and reflects your strengths.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-illustration">
+                            <img src="assets/Group 12.png" alt="LinkedIn profile optimization" class="feature-img">
+                        </div>
+                        <h4 class="feature-title">A LinkedIn Profile That Works For You</h4>
+                        <p class="feature-description">Attract the right eyes, start conversations, and show up in
+                            recruiter searches.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-illustration">
+                            <img src="assets/Group 90.png" alt="Interview confidence" class="feature-img">
+                        </div>
+                        <h4 class="feature-title">Interview Confidence</h4>
+                        <p class="feature-description">Interview preparation with real HR professionals so you speak
+                            clearly, confidently, and convincingly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // Hamburger menu functionality
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const navigation = document.querySelector('.navigation');
+
+            hamburgerMenu.addEventListener('click', function() {
+                hamburgerMenu.classList.toggle('active');
+                navigation.classList.toggle('active');
+            });
+
+            // Close menu when clicking on nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburgerMenu.classList.remove('active');
+                    navigation.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!hamburgerMenu.contains(event.target) && !navigation.contains(event.target)) {
+                    hamburgerMenu.classList.remove('active');
+                    navigation.classList.remove('active');
+                }
+            });
+        </script>
+    </body>
+
+</html>
